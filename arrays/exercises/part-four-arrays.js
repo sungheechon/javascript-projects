@@ -3,8 +3,18 @@ let holdCabinet2 = ['orange drink', 'nerf toys', 'camera', 42, 'parsnip'];
 
 //Explore the methods concat, slice, reverse, and sort to determine which ones alter the original array.
 
-//1) Print the result of using concat on the two arrays. Does concat alter the original arrays? Verify this by printing holdCabinet1 after using the method.
+//1) Print the result of using concat on the two arrays. Does concat alter the original arrays? "NO" Verify this by printing holdCabinet1 after using the method.
 
-//2) Print a slice of two elements from each array. Does slice alter the original arrays?
+console.log(holdCabinet1.concat(holdCabinet2));
+console.log(holdCabinet1);
+//2) Print a slice of two elements from each array. Does slice alter the original arrays? NO
 
-//3) reverse the first array, and sort the second. What is the difference between these two methods? Do the methods alter the original arrays?
+console.log(holdCabinet1.slice(0, 2));
+console.log(holdCabinet2.slice(3, 4));
+
+//3) reverse the first array, and sort the second. What is the difference between these two methods? REVERSE REVERSES THE ARRAY, SORT SORTS BY ALPHABETICALLY. Do the methods alter the original arrays? YES
+holdCabinet1.reverse();
+holdCabinet2.sort();
+console.log(holdCabinet1);
+console.log(holdCabinet2);
+
