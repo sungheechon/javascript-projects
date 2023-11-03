@@ -9,6 +9,19 @@
 // 5. Use console.log(reverseCharacters(myVariableName)); to call the function and verify that it correctly reverses the characters in the string.
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
 
+function reverseCharacters(word) {
+    if (typeof word === "string") {
+        return word.split('').reverse().join('');
+    }
+    else {
+        return Number(word.toString().split('').reverse().join(''));
+    }
+
+}
+console.log(reverseCharacters(12345));
+
+
+
 // Part Two: Reverse Digits
 
 // 1. Add an if statement to reverseCharacters to check the typeof the parameter.
@@ -26,9 +39,20 @@
 // 5. Return the final, reversed array.
 // 6. Be sure to print the results from each test case in order to verify your code.
 
+function arrayTest(array) {
+    let mantaRay = [];
+    for (let i = 0; i < array.length; i++) {
+        mantaRay.push(reverseCharacters(array[i]));
+    }
+    return mantaRay.reverse();
+}
+
+
 let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
 let arrayTest2 = [123, 8897, 42, 1168, 8675309];
 let arrayTest3 = ['hello', 'world', 123, 'orange'];
+
+console.log(arrayTest(arrayTest1));
 
 // Bonus Missions
 
@@ -37,6 +61,29 @@ let arrayTest3 = ['hello', 'world', 123, 'orange'];
 // 3. Retrieve only the first 3 characters from strings with lengths larger than 3.
 // 4. Use a template literal to return the phrase We put the '___' in '___'. Fill the first blank with the modified string, and fill the second blank with the original string.
 
+function coolPhrase(sentence) {
+    // if the sentence is 3 characters or less then we are only getting the LAST characters.
+    // if it's more than 3 characters, we are getting the FIRST 3 characters.
+    // at each condition we're going to store one of these as a variable.
+    // 'We put the ${ } in ${}.'
+
+    let lastCharacter = sentence[sentence.length - 1];
+    let partOfASentence;
+    if (sentence.length > 3) {
+        partOfASentence = sentence.slice(0, 3);
+
+    } else {
+        partOfASentence = lastCharacter;
+    }
+
+    return partOfASentence;
+
+    // for (let i = 0; i < sentence.length; i++) {
+    //     if
+    // }
+
+}
+console.log(coolPhrase("ldf df  d"));
 // Test Function
 
 // 1. Outside of the function, define the variable str and initialize it with a string (e.g. 'Functions rock!').
