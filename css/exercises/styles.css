@@ -1,1 +1,27 @@
 /* Start adding your styling below! */ 
+
+body {
+    background-color: #EEDC82; /* Flax color */
+    margin: 5%;
+    
+}
+
+p {
+    color: #295f4e; /* green color */
+}
+
+.align-center {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+#cool-text {
+    color: #28518a; /* blue color */
+}
+
+#ol-style {
+    color: #734444; /* brown color */
+}
