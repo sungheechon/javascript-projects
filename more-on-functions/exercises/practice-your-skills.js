@@ -36,9 +36,11 @@ let practiceMap = arr.map(function (n) {
     }
 });
 
+let practiceMap2 = arr.map(practice);
 
 
 console.log(practice(arr));
 console.log(practiceMap);
+console.log(practiceMap2);
 
 
